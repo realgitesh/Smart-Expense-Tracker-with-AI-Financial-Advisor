@@ -462,7 +462,7 @@ Recommended IDEs:
 git clone https://github.com/realgitesh/Smart-Expense-Tracker.git
 ```
 
-Move into the project:
+Move into the project :
 
 ```bash
 cd Smart-Expense-Tracker

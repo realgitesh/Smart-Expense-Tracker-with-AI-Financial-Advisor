@@ -8,7 +8,7 @@ This guide explains how to configure and run the backend and frontend of the pro
 
 # 1. Prerequisites
 
-Install the following software:
+Install the following software :
 
 * Java 22
 * MySQL 8.x

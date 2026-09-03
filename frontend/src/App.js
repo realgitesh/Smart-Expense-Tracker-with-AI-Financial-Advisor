@@ -42,8 +42,8 @@ function AppLayout({ children }) {
                 <div className="brand-block">
                     <div className="brand-mark">₹</div>
                     <div>
-                        <div className="brand-name">SmartSpend</div>
-                        <div className="brand-caption">Personal finance</div>
+                        <div className="brand-name">Smart Expense Tracker</div>
+                        <div className="brand-caption">With AI Financial Advisor</div>
                     </div>
                 </div>
 
@@ -89,7 +89,7 @@ function AppLayout({ children }) {
                 <header className="mobile-header">
                     <div className="mobile-brand">
                         <div className="brand-mark">₹</div>
-                        <strong>SmartSpend</strong>
+                        <strong>Smart Expense Tracker</strong>
                     </div>
                     <button className="mobile-signout" onClick={logout}>↪</button>
                 </header>

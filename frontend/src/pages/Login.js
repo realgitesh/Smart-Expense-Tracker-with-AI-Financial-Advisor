@@ -81,11 +81,11 @@ function Login() {
 
                         <div>
                             <div className="brand-name">
-                                SmartSpend
+                                Smart Expense Tracker
                             </div>
 
                             <div className="brand-caption">
-                                Personal finance
+                                With AI Financial Advisor
                             </div>
                         </div>
 
