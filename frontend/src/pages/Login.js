@@ -26,6 +26,7 @@ function Login() {
 
             localStorage.setItem("userId", response.data.userId);
             localStorage.setItem("fullName", response.data.fullName);
+            localStorage.setItem("email", response.data.email);
 
             await Swal.fire({
                 icon: "success",

@@ -53,7 +53,9 @@ function Register() {
                 Swal.fire({
                     icon: "error",
                     title: "Registration Failed",
-                    text: error.response.data.message || "Unable to register.",
+                    text:
+                        error.response.data.message ||
+                        "Unable to register.",
                     confirmButtonColor: "#2563eb"
                 });
 
@@ -75,58 +77,82 @@ function Register() {
     return (
 
         <div className="auth-page">
+
             <div className="auth-card">
+
                 <div className="container">
 
-            <div className="auth-brand">
-                <div className="brand-mark">₹</div>
-                <div>
-                    <div className="brand-name">SmartSpend</div>
-                    <div className="brand-caption">Personal finance</div>
+                    <div className="auth-brand">
+
+                        <div className="brand-mark">₹</div>
+
+                        <div>
+
+                            <div className="brand-name">
+                                Smart Expense Tracker
+                            </div>
+
+                            <div className="brand-caption">
+                                With AI Financial Advisor
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <h2>📝 Register</h2>
+
+                    <input
+                        type="text"
+                        placeholder="Full Name"
+                        value={user.fullName}
+                        onChange={(e) =>
+                            setUser({
+                                ...user,
+                                fullName: e.target.value
+                            })
+                        }
+                    />
+
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        value={user.email}
+                        onChange={(e) =>
+                            setUser({
+                                ...user,
+                                email: e.target.value
+                            })
+                        }
+                    />
+
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        value={user.password}
+                        onChange={(e) =>
+                            setUser({
+                                ...user,
+                                password: e.target.value
+                            })
+                        }
+                    />
+
+                    <button onClick={registerUser}>
+                        Register
+                    </button>
+
+                    <br />
+                    <br />
+
+                    <Link to="/">
+                        Already have an account? Login
+                    </Link>
+
                 </div>
+
             </div>
 
-            <h2>📝 Register</h2>
-
-            <input
-                type="text"
-                placeholder="Full Name"
-                value={user.fullName}
-                onChange={(e) =>
-                    setUser({ ...user, fullName: e.target.value })
-                }
-            />
-
-            <input
-                type="email"
-                placeholder="Email"
-                value={user.email}
-                onChange={(e) =>
-                    setUser({ ...user, email: e.target.value })
-                }
-            />
-
-            <input
-                type="password"
-                placeholder="Password"
-                value={user.password}
-                onChange={(e) =>
-                    setUser({ ...user, password: e.target.value })
-                }
-            />
-
-            <button onClick={registerUser}>
-                Register
-            </button>
-
-            <br /><br />
-
-            <Link to="/">
-                Already have an account? Login
-            </Link>
-
-                </div>
-            </div>
         </div>
 
     );

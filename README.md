@@ -1,12 +1,16 @@
 # Smart-Expense-Tracker-with-AI-Financial-Advisor
 
-A full-stack personal finance management web application built using **React, Java Spring Boot, and MySQL**. The application allows users to manage income and expenses, create budgets, monitor spending, generate reports, and receive AI-based financial guidance.
+A full-stack personal finance management web application built using **React, Java Spring Boot, and MySQL**.
 
-## Project Overview
+The application allows users to manage income and expenses, create and monitor budgets, analyze financial activity, generate reports, export financial data, and receive AI-powered financial guidance.
 
-**Smart-Expense-Tracker-with-AI-Financial-Advisor** is designed to provide users with a single platform for managing their personal finances.
+---
 
-The application provides:
+# Project Overview
+
+**Smart-Expense-Tracker-with-AI-Financial-Advisor** provides users with a single platform for managing and understanding their personal finances.
+
+The application includes:
 
 * User registration and login
 * Income management
@@ -18,7 +22,7 @@ The application provides:
 * Budget planning and monitoring
 * Budget progress and status
 * Financial reports
-* PDF/Excel report export
+* PDF and Excel export
 * AI-powered financial advice
 * Profile management
 * Password change functionality
@@ -29,23 +33,23 @@ The application provides:
 
 ---
 
-## Features
+# Features
 
-### 1. User Authentication
+## 1. User Authentication
 
 Users can:
 
 * Register a new account
 * Login using email and password
 * Logout from the application
-* Access protected application pages only after login
+* Access protected application pages after login
 * Remain logged in when normally refreshing the browser page
 
-Passwords are stored using **BCrypt hashing** rather than plain-text storage.
+Passwords are stored using **BCrypt password hashing** rather than plain-text storage.
 
 ---
 
-### 2. Dashboard
+## 2. Dashboard
 
 The dashboard provides an overview of the user's financial activity.
 
@@ -60,13 +64,14 @@ It can display:
 * Monthly financial information
 * Yearly financial information
 * Budget progress
-* Financial summaries and charts
+* Financial summaries
+* Charts and visualizations
 
 The dashboard acts as the central overview of the application.
 
 ---
 
-### 3. Income Management
+## 3. Income Management
 
 Users can manage their income records.
 
@@ -90,7 +95,7 @@ Date: 2026-08-01
 
 ---
 
-### 4. Expense Management
+## 4. Expense Management
 
 Users can manage their daily expenses.
 
@@ -118,7 +123,7 @@ Description: Dinner
 
 ---
 
-### 5. Expense Analytics
+## 5. Expense Analytics
 
 The application provides financial analysis based on stored transactions.
 
@@ -135,23 +140,23 @@ This helps users understand their spending patterns.
 
 ---
 
-### 6. Budget Planning
+## 6. Budget Planning
 
 Users can create category-based budgets for a selected month and year.
 
 Example:
 
 ```text
-Food       → ₹10,000
-Transport  → ₹5,000
-Shopping   → ₹4,000
+Food        → ₹10,000
+Transport   → ₹5,000
+Shopping    → ₹4,000
 ```
 
 The application prevents duplicate budgets for the same category and selected period.
 
 ---
 
-### 7. Budget Monitoring
+## 7. Budget Monitoring
 
 The budget module compares planned spending with actual expenses.
 
@@ -166,50 +171,55 @@ It provides information such as:
 Example:
 
 ```text
-Food Budget     : ₹10,000
-Food Spent      : ₹4,000
-Remaining       : ₹6,000
-Usage           : 40%
-Status          : On Track
+Food Budget : ₹10,000
+Food Spent  : ₹4,000
+Remaining   : ₹6,000
+Usage       : 40%
+Status      : On Track
 ```
 
-The application can also identify situations where the budget is approaching or exceeding its limit.
+The application can identify when a budget is approaching or exceeding its limit.
+
+Budget-related email alerts are also supported when the required email configuration is enabled.
 
 ---
 
-### 8. Reports
+## 8. Reports and Export
 
 The Reports module provides financial reporting functionality.
 
 Users can review financial information and generate reports based on available transaction data.
 
-The backend also includes report export functionality using:
+The backend supports:
 
-* PDF
-* Excel
+* PDF reports
+* Excel reports
 
-The project includes Apache POI and PDF-related libraries for report generation.
+The project uses:
+
+* **Apache POI** for Excel-related report generation
+* **PDFBox** for PDF-related report generation
 
 ---
 
-### 9. AI Financial Advisor
+## 9. AI Financial Advisor
 
 The application includes an **AI Financial Advisor**.
 
-The feature uses the user's financial context to generate financial guidance such as:
+The feature uses relevant financial context to provide guidance such as:
 
 * Spending suggestions
 * Budgeting suggestions
 * Saving recommendations
 * Financial observations
 
-The AI communication is handled through the backend rather than exposing the AI API key directly to the frontend.
+AI communication is handled through the backend so that the AI API key is not directly exposed to the React frontend.
 
-If the external AI service is unavailable or no API key is configured, the application can use fallback advice.
+If the external AI service is unavailable or no API key is configured, the application can provide fallback financial advice.
 
 ---
 
-### 10. Profile Management
+## 10. Profile Management
 
 Users can manage their account information through the Profile section.
 
@@ -221,19 +231,19 @@ Supported functionality includes:
 
 ---
 
-### 11. Budget Email Alerts
+## 11. Budget Email Alerts
 
-The backend contains dedicated services for budget-related email notifications.
+The backend contains functionality for budget-related email notifications.
 
-The email functionality can be enabled through application configuration and SMTP settings.
+Email notifications can be enabled through application configuration and SMTP settings.
 
-Email functionality is disabled by default unless the required configuration is provided.
+Email functionality is **disabled by default** unless the required configuration is provided.
 
 ---
 
-## Technology Stack
+# Technology Stack
 
-### Frontend
+## Frontend
 
 * React
 * JavaScript
@@ -245,7 +255,7 @@ Email functionality is disabled by default unless the required configuration is 
 * HTML
 * CSS
 
-### Backend
+## Backend
 
 * Java 22
 * Spring Boot 3.5.6
@@ -253,83 +263,91 @@ Email functionality is disabled by default unless the required configuration is 
 * Spring Data JPA
 * Hibernate
 * Jakarta Validation
-* Spring Security / BCrypt
+* BCrypt password hashing
 * Spring WebClient
 
-### Database
+## Database
 
 * MySQL 8.x
 
-### Reporting
+## Reporting
 
 * Apache POI
 * PDFBox
 
-### Build Tool
+## Build Tools
 
 * Maven
 * Maven Wrapper
 
-The documented backend stack uses Java 22, Spring Boot 3.5.6, Spring Data JPA/Hibernate, MySQL 8.x, validation, security/crypto support, WebClient, Apache POI/PDFBox, and Maven.
+## Development Environment
+
+* Eclipse IDE for Enterprise Java and Web Developers
+* Visual Studio Code
+* Java Development Kit 22
 
 ---
 
-## System Architecture
+# System Architecture
 
 The project follows a layered full-stack architecture:
 
 ```text
-                ┌──────────────────────┐
-                │     React Frontend   │
-                │                      │
-                │ Dashboard            │
-                │ Income               │
-                │ Expense              │
-                │ Budget               │
-                │ Reports              │
-                │ AI Advisor           │
-                │ Profile              │
-                └──────────┬───────────┘
-                           │
-                           │ REST API
-                           ▼
-                ┌──────────────────────┐
-                │   Spring Boot       │
-                │      Backend        │
-                └──────────┬───────────┘
-                           │
-             ┌─────────────┼─────────────┐
-             ▼             ▼             ▼
-        Controller      Service      Repository
-                           │
-                           ▼
-                     ┌───────────┐
-                     │  MySQL    │
-                     │ Database  │
-                     └───────────┘
-
-                           │
-                           ▼
-                    Gemini AI Service
+                ┌─────────────────────────┐
+                │     React Frontend      │
+                │                         │
+                │ Dashboard               │
+                │ Income                  │
+                │ Expense                 │
+                │ Budget                  │
+                │ Reports                 │
+                │ AI Advisor              │
+                │ Profile                 │
+                └────────────┬────────────┘
+                             │
+                             │ REST API
+                             ▼
+                ┌─────────────────────────┐
+                │    Spring Boot Backend  │
+                └────────────┬────────────┘
+                             │
+                ┌────────────┼────────────┐
+                ▼            ▼            ▼
+           Controller     Service     Repository
+                             │
+                             ▼
+                       ┌────────────┐
+                       │   MySQL    │
+                       │  Database  │
+                       └────────────┘
+                             │
+                             │
+                             ▼
+                     ┌───────────────┐
+                     │   Gemini AI   │
+                     │    Service    │
+                     └───────────────┘
 ```
 
-The backend follows:
+The backend follows the general structure:
 
 ```text
 Controller
-    ↓
+     ↓
 Service
-    ↓
+     ↓
 Repository
-    ↓
+     ↓
 MySQL
 ```
 
-The current backend contains separate configuration, controller, DTO, entity, repository, and service packages.
+The application separates API handling, business logic, data access, entities, and data-transfer objects.
 
 ---
 
-## Backend Project Structure
+# Backend Project Structure
+
+The backend follows a Maven/Spring Boot project structure similar to:
 
 ```text
 backend/
@@ -340,31 +358,10 @@ backend/
 │   │   │   └── com/gitesh/expensetracker/
 │   │   │
 │   │   │   ├── config/
-│   │   │   │   ├── SecurityConfig.java
-│   │   │   │   └── WebClientConfig.java
-│   │   │   │
 │   │   │   ├── controller/
-│   │   │   │   ├── AuthController.java
-│   │   │   │   ├── IncomeController.java
-│   │   │   │   ├── ExpenseController.java
-│   │   │   │   ├── BudgetController.java
-│   │   │   │   ├── DashboardController.java
-│   │   │   │   ├── ReportController.java
-│   │   │   │   ├── AIAdviceController.java
-│   │   │   │   ├── ProfileController.java
-│   │   │   │   └── GlobalExceptionHandler.java
-│   │   │   │
 │   │   │   ├── dto/
-│   │   │   │
 │   │   │   ├── entity/
-│   │   │   │   ├── User.java
-│   │   │   │   ├── Income.java
-│   │   │   │   ├── Expense.java
-│   │   │   │   ├── Budget.java
-│   │   │   │   └── AIAdvice.java
-│   │   │   │
 │   │   │   ├── repository/
-│   │   │   │
 │   │   │   └── service/
 │   │   │
 │   │   └── resources/
@@ -377,11 +374,11 @@ backend/
 └── mvnw.cmd
 ```
 
-The project documentation confirms the controller, DTO, entity, repository, and service organization used by the backend.
+The exact classes inside each package may change as the project develops.
 
 ---
 
-## Frontend Structure
+# Frontend Structure
 
 ```text
 frontend/
@@ -418,9 +415,9 @@ frontend/
 
 # Database
 
-The application uses **MySQL** for persistent storage.
+The application uses **MySQL** for persistent data storage.
 
-The main entities are:
+The main application entities include:
 
 ```text
 User
@@ -430,9 +427,9 @@ User
  └── AIAdvice
 ```
 
-A single user can have multiple income and expense records, while financial records are associated with the corresponding user.
+A single user can have multiple income and expense records.
 
-The project documentation describes the database as storing users, income, expenses, budgets, and AI-related financial information.
+Financial records are associated with their corresponding user so that user-specific financial data can be handled separately.
 
 ---
 
@@ -441,16 +438,18 @@ The project documentation describes the database as storing users, income, expen
 Install the following before running the project:
 
 * Java 22
-* Maven
 * MySQL 8.x
 * Node.js
 * npm
 * Git
+* Maven (optional because the project includes the Maven Wrapper)
 
-Recommended IDEs:
+## Recommended Development Tools
 
-* IntelliJ IDEA for backend
-* Visual Studio Code for frontend
+* Eclipse IDE for Enterprise Java and Web Developers
+* Visual Studio Code
+
+The backend has been configured and tested with **Java 22** and Eclipse.
 
 ---
 
@@ -458,21 +457,23 @@ Recommended IDEs:
 
 ## 1. Clone the Repository
 
+Clone the project using:
+
 ```bash
-git clone https://github.com/realgitesh/Smart-Expense-Tracker.git
+git clone https://github.com/realgitesh/Smart-Expense-Tracker-with-AI-Financial-Advisor.git
 ```
 
-Move into the project :
+Move into the project directory:
 
 ```bash
-cd Smart-Expense-Tracker
+cd Smart-Expense-Tracker-with-AI-Financial-Advisor
 ```
 
 ---
 
 ## 2. Configure MySQL
 
-Start MySQL and create a database.
+Start MySQL and create the application database.
 
 Example:
 
@@ -480,7 +481,9 @@ Example:
 CREATE DATABASE expense_tracker;
 ```
 
-The exact database name can be changed according to the configured database URL.
+The database name and connection details should match the backend configuration.
+
+The current local database configuration uses MySQL on port **3307**.
 
 ---
 
@@ -493,20 +496,21 @@ Configure the required environment variables.
 Example:
 
 ```text
-DB_URL=jdbc:mysql://localhost:3306/expense_tracker
+DB_URL=jdbc:mysql://localhost:3307/expense_tracker
 DB_USERNAME=your_mysql_username
 DB_PASSWORD=your_mysql_password
 GEMINI_API_KEY=your_gemini_api_key
+GEMINI_API_URL=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
 ```
 
 Optional email configuration can be supplied when email alerts are required:
 
 ```text
 APP_EMAIL_ENABLED=false
-MAIL_HOST=your_smtp_host
+MAIL_HOST=smtp.gmail.com
 MAIL_PORT=587
 MAIL_USERNAME=your_email
-MAIL_PASSWORD=your_email_password
+MAIL_PASSWORD=your_smtp_app_password
 ```
 
 **Never commit real passwords, API keys, or SMTP credentials to GitHub.**
@@ -515,28 +519,53 @@ MAIL_PASSWORD=your_email_password
 
 ## 4. Start the Backend
 
-Open a terminal inside the `backend` directory:
+Open a terminal inside the backend directory.
+
+If the project is organized with the backend as the current directory:
 
 ```bash
 cd backend
 ```
 
-Run:
-
-```bash
-mvn spring-boot:run
-```
-
-Or on Windows using the Maven wrapper:
+On Windows, use the Maven Wrapper:
 
 ```bash
 mvnw.cmd spring-boot:run
 ```
 
-The backend runs on:
+Alternatively, Maven can be used directly:
+
+```bash
+mvn spring-boot:run
+```
+
+The Spring Boot backend runs on:
 
 ```text
 http://localhost:8080
+```
+
+---
+
+# Running the Backend from Eclipse
+
+The backend can also be started directly from **Eclipse IDE for Enterprise Java and Web Developers**.
+
+1. Import the backend as an existing Maven project.
+2. Wait for Maven dependencies and workspace building to complete.
+3. Locate:
+
+```text
+ExpenseTrackerApplication.java
+```
+
+4. Run the application as a Java Application or Spring Boot application when the option is available.
+5. Wait for the Spring Boot application to start.
+
+The backend uses port:
+
+```text
+8080
 ```
 
 ---
@@ -563,39 +592,37 @@ Start the React application:
 npm start
 ```
 
+This project uses **Create React App**, so the correct development command is:
+
+```bash
+npm start
+```
+
+and not:
+
+```bash
+npm run dev
+```
+
 The frontend normally runs on:
 
 ```text
 http://localhost:3000
 ```
 
-This project uses Create React App, so the correct development command is:
-
-```bash
-npm start
-```
-
-not:
-
-```bash
-npm run dev
-```
-
 ---
 
 # Frontend API Configuration
 
-The frontend communicates with the Spring Boot backend through Axios.
+The React frontend communicates with the Spring Boot backend through Axios.
 
-The API service uses:
+The default backend API base URL is:
 
 ```text
 http://localhost:8080/api
 ```
 
-by default.
-
-An environment variable can also be used:
+The frontend can also use the following environment variable:
 
 ```text
 REACT_APP_API_URL
@@ -622,11 +649,11 @@ Dashboard
    ↓
 ┌───────────────┬───────────────┬───────────────┐
 │               │               │               │
-Income       Expenses        Budget          Reports
+Income        Expenses        Budget          Reports
 │               │               │               │
 └───────────────┴───────────────┴───────────────┘
                        ↓
-                 AI Financial Advisor
+                AI Financial Advisor
                        ↓
                     Profile
                        ↓
@@ -637,104 +664,166 @@ Income       Expenses        Budget          Reports
 
 # Example Demonstration
 
-A simple demonstration of the project can use the following data.
+A simple project demonstration can use the following sample data.
 
-### Income
+## Income
 
 ```text
 Salary = ₹50,000
 ```
 
-### Expenses
+## Expenses
 
 ```text
 Food       = ₹4,000
 Transport  = ₹2,000
 ```
 
-### Budgets
+## Budgets
 
 ```text
 Food       = ₹10,000
 Transport  = ₹5,000
 ```
 
-The demonstration can then show:
+A demonstration can then show:
 
 1. Register a user.
 2. Login.
 3. Open the Dashboard.
-4. Add ₹50,000 salary.
-5. Add ₹4,000 food expense.
-6. Add ₹2,000 transport expense.
-7. Create Food and Transport budgets.
-8. View budget progress.
-9. Open Reports.
-10. Generate financial advice using AI Advisor.
-11. Open Profile.
-12. Logout.
-13. Verify that protected pages cannot be accessed after logout without logging in again.
-
-This demonstration flow is also reflected in the project documentation.
+4. Add an income record.
+5. Add expense records.
+6. Create category budgets.
+7. View budget progress.
+8. Open Reports.
+9. Generate a financial report.
+10. Open the AI Financial Advisor.
+11. Review the generated financial guidance.
+12. Open Profile.
+13. Logout.
+14. Verify protected pages require authentication.
 
 ---
 
 # Security
 
-The project includes several security-related measures:
+The project includes several security-related measures.
 
-### Password Hashing
+## Password Hashing
 
-Passwords are stored using **BCrypt hashing**.
+Passwords are stored using **BCrypt password hashing**.
 
-BCrypt is a one-way password hashing mechanism. Passwords are therefore not stored as plain text.
+BCrypt is designed for securely storing passwords and does not store the original password as plain text.
 
-### Protected Routes
+## Protected Routes
 
-Frontend protected routes prevent unauthenticated users from directly opening application pages.
+The React frontend uses protected routes to prevent unauthenticated users from directly accessing application pages.
 
-### User Data Ownership
+## User Data Ownership
 
-Financial operations are associated with the logged-in user, helping prevent users from modifying another user's financial records.
+Financial operations are associated with the corresponding user, helping prevent users from modifying another user's financial records.
 
-### API Key Protection
+## API Key Protection
 
-The AI API key is configured on the backend rather than being placed directly inside the React frontend.
+The Gemini AI API key is configured on the backend rather than being directly exposed in the React frontend.
 
-### Environment Variables
+## Environment Variables
 
 Sensitive configuration such as:
 
 * Database passwords
-* AI API keys
-* Email credentials
+* Gemini API keys
+* SMTP credentials
 
-should be supplied through environment variables rather than committed to GitHub.
+should be supplied through environment variables and should not be committed to GitHub.
 
 ---
 
-# Error Handling
+# Error Handling and Validation
 
-The backend contains a centralized:
+The backend includes centralized exception handling through:
 
 ```text
 GlobalExceptionHandler
 ```
 
-for handling application errors and returning appropriate error responses.
+Input validation is used for relevant application data.
 
-Input validation is also used for relevant application data.
+The layered backend architecture also separates request handling, business logic, and database access.
 
 ---
 
-# Testing
+# Reports and Exports
 
-The main application workflows were manually tested.
+The application supports financial report generation and export.
 
-The tested areas include:
+## Excel
+
+Excel-related report generation uses:
+
+```text
+Apache POI
+```
+
+## PDF
+
+PDF-related report generation uses:
+
+```text
+PDFBox
+```
+
+These features allow users to take financial information outside the application for further review.
+
+---
+
+# AI Financial Advisor
+
+The AI Financial Advisor is an additional assistance feature built around the user's financial information.
+
+It can provide:
+
+* Spending observations
+* Budgeting suggestions
+* Saving recommendations
+* Financial guidance
+
+The AI functionality is not required for the core expense-tracking functionality.
+
+The application can use fallback advice when the external AI service is unavailable or an API key has not been configured.
+
+---
+
+# Email Notifications
+
+The backend supports budget-related email notifications.
+
+Email notifications are disabled by default.
+
+They can be enabled through environment and SMTP configuration.
+
+Required configuration may include:
+
+```text
+APP_EMAIL_ENABLED
+MAIL_HOST
+MAIL_PORT
+MAIL_USERNAME
+MAIL_PASSWORD
+```
+
+For Gmail, an appropriate SMTP/App Password configuration should be used rather than exposing the normal account password.
+
+---
+
+# Testing and Validation
+
+The application has been manually tested across major workflows.
+
+Tested areas include:
 
 * Backend startup
-* Database connectivity
+* MySQL connectivity
 * User registration
 * User login
 * Dashboard access
@@ -747,15 +836,20 @@ The tested areas include:
 * Profile navigation
 * Logout
 * Protected route behavior
-* Browser Back/Forward behavior after logout
 
-The planned seven major functional tests were reported as passing during the project validation.
+The project has also been validated after migration to **Eclipse IDE for Enterprise Java and Web Developers** with **Java 22**.
+
+The backend Maven build has been successfully verified using:
+
+```bash
+mvnw.cmd clean package -DskipTests
+```
 
 ---
 
-# Current Project Status
+# Project Status
 
-The current project includes the major planned application modules:
+The major application modules are implemented and working:
 
 ```text
 Authentication        ✓
@@ -779,69 +873,111 @@ Responsive UI         ✓
 
 # API Modules
 
-The backend REST API is organized around the following controllers:
+The backend is organized around REST API modules for:
 
 ```text
-AuthController
-IncomeController
-ExpenseController
-DashboardController
-BudgetController
-ReportController
-AIAdviceController
-ProfileController
+Authentication
+Income
+Expense
+Dashboard
+Budget
+Reports
+AI Financial Advisor
+Profile
 ```
 
-The backend separates API handling from business logic and database access using the Controller → Service → Repository structure.
+The backend follows the general:
+
+```text
+Controller
+     ↓
+Service
+     ↓
+Repository
+     ↓
+Database
+```
+
+architecture.
 
 ---
 
 # Important Configuration
 
-The backend configuration is stored in:
+The main backend configuration is stored in:
 
 ```text
 backend/src/main/resources/application.properties
 ```
 
-Do not place production secrets directly inside this file.
+Sensitive production configuration should not be hard-coded into the project.
 
 Use environment variables for:
 
 ```text
-Database configuration
+Database credentials
 Gemini API configuration
-Email/SMTP configuration
+Email/SMTP credentials
 ```
 
 ---
 
-# Reports and Exports
+# Development Environment
 
-The application backend includes report-generation functionality.
+The current development environment is:
 
-Supported export technologies include:
+```text
+Operating System:
+Windows
 
-* Apache POI for Excel-related reports
-* PDFBox for PDF-related reports
+Java:
+Java 22
 
-This allows users to take financial information outside the web application for further review.
+Backend:
+Spring Boot 3.5.6
+
+Database:
+MySQL 8.x
+
+Frontend:
+React
+
+Build:
+Maven / Maven Wrapper
+
+Backend IDE:
+Eclipse IDE for Enterprise Java and Web Developers
+
+Frontend / General Editing:
+Visual Studio Code
+
+Version Control:
+Git / GitHub
+```
 
 ---
 
-# AI Financial Advisor
+# Servlet and JSP Practice Environment
 
-The AI feature is designed as an additional financial-assistance feature rather than a dependency for the core application.
+The project development environment is separate from the college Servlet/JSP practice environment.
 
-The main financial application continues to provide:
+For Servlet/JSP learning, Apache Tomcat 10.1 is configured separately in Eclipse.
 
-* Income management
-* Expense management
-* Budgeting
-* Reports
-* Dashboard functionality
+The current Servlet practice configuration uses:
 
-even when the external AI service is unavailable.
+```text
+Apache Tomcat: 10.1
+HTTP Port: 8181
+Admin Port: 8182
+```
+
+This Tomcat configuration is for **Servlet/JSP practice projects** and is not part of the Smart Expense Tracker Spring Boot backend architecture.
+
+The Smart Expense Tracker Spring Boot backend continues to use:
+
+```text
+Port: 8080
+```
 
 ---
 
@@ -861,7 +997,7 @@ Possible future improvements include:
 * Production monitoring
 * Improved notification system
 
-These are future improvements rather than requirements for the current working version.
+These are future improvements and are not requirements for the current working version.
 
 ---
 
@@ -869,64 +1005,7 @@ These are future improvements rather than requirements for the current working v
 
 GitHub repository:
 
-https://github.com/realgitesh/Smart-Expense-Tracker
-
----
-
-# Project Documentation
-
-Additional project documentation can cover:
-
-* Software Development Life Cycle
-* Functional requirements
-* Non-functional requirements
-* System architecture
-* Database design
-* Testing
-* Demonstration flow
-* Future enhancements
-
----
-
-# Conclusion
-
-**Smart-Expense-Tracker-with-AI-Financial-Advisor** demonstrates a complete full-stack personal finance management system using React, Java Spring Boot, and MySQL.
-
-The application combines:
-
-```text
-Authentication
-      +
-Income Management
-      +
-Expense Management
-      +
-Budget Planning
-      +
-Financial Analytics
-      +
-Reports
-      +
-AI Financial Advice
-      =
-Complete Personal Finance Application
-```
-
-The project demonstrates practical implementation of:
-
-* React frontend development
-* REST API development
-* Java Spring Boot
-* Spring Data JPA
-* MySQL database integration
-* Layered backend architecture
-* Password hashing
-* Validation
-* Exception handling
-* Financial calculations
-* Report generation
-* External AI API integration
-* Frontend/backend communication
+https://github.com/realgitesh/Smart-Expense-Tracker-with-AI-Financial-Advisor
 
 ---
 
